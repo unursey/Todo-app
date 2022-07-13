@@ -8,6 +8,7 @@ const {modal} = createModal();
 document.body.append(modal);
 
 document.querySelector(".btn-primary").addEventListener("click", () => {
+  
   let yourName = sendName();
   if (isEmpty(yourName)) {
     closeModal();

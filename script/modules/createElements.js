@@ -38,6 +38,7 @@ export const createForm = () => {
 export const createTable = () => {
   const tableWrapper = document.createElement("div");
   tableWrapper.classList.add("table-wrapper");
+  tableWrapper.style.width = 740 + "px";
 
   const table = document.createElement("table");
   table.classList.add("table", "table-hover", "table-bordered");
@@ -46,11 +47,11 @@ export const createTable = () => {
   thead.insertAdjacentHTML(
     "beforeend",
     `
-        <tr>
+        <tr class="w-100">
             <th>№</th>
-            <th>Задача</th>
-            <th>Статус</th>
-            <th>Действия</th>
+            <th class="w-25 text-break">Задача</th>
+            <th class="w-20">Статус</th>
+            <th class="w-50">Действия</th>
         </tr>
     `
   );
@@ -72,7 +73,7 @@ export const createRow = (item) => {
   tdNum.classList.add("number");
 
   const tdTask = document.createElement("td");
-  tdTask.classList.add("task");
+  tdTask.classList.add("task", "text-break");
   tdTask.textContent = item.task;
 
   const tdStatus = document.createElement("td");
@@ -122,11 +123,11 @@ export const createModal = () => {
             <div class="mb-3">
               <label for="recipient-name" class="col-form-label">Введите Ваше имя:</label>
               <input type="text" class="form-control" id="recipient-name">
-            </div>    
+            </div>
+            <div class="modal-footer">   
+              <button type="submit" class="btn btn-primary">Отправить</button>
+            </div>     
           </form>        
-        </div>
-        <div class="modal-footer">   
-          <button type="button" class="btn btn-primary">Отправить</button>
         </div>
       </div>
     </div>
