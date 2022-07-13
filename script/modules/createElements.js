@@ -2,7 +2,7 @@
 export const createLogo = (yourName) => {
   const h3 = document.createElement("h3");
 
-  yourName = yourName[0].toUpperCase() + yourName.slice(1);
+  yourName = yourName.split(/\s+/).map(word => word[0].toUpperCase() + word.substring(1)).join(' ')
   h3.textContent = `Todo App. ${yourName}`;
   return h3;
 };
