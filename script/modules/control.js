@@ -106,7 +106,7 @@ export const sendName = () => {
 
 export const closeModal = () => {
   document.querySelector(".modal").remove();
-}
+};
 
 export const isEmpty = (str) => {
   if (str != null && typeof str !== "undefined") {
@@ -116,4 +116,4 @@ export const isEmpty = (str) => {
    }else {
       return false;
    }
-}
+};
