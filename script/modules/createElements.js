@@ -15,7 +15,7 @@ export const createForm = () => {
       <input type="text" class="form-control" name="task" placeholder="ввести задачу">
     </label>
 
-    <select name="importance" class="me-3">
+    <select name="importance" class="me-3 form-select w-25">
       <option>Обычное</option>
       <option>Важное</option>
       <option>Срочное</option>
